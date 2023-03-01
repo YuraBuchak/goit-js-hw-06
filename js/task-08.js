@@ -9,7 +9,11 @@ const validInput = function (event) {
     alert("Всі поля повинні бути заповнені");
     return;
   }
-  console.log(`{Email: ${email.value}, Password: ${password.value}}`);
+  const obj = {
+    [email.name]: email.value,
+    [password.name]: password.value,
+  };
+  console.log(obj);
   event.target.reset();
 };
 
